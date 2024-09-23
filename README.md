@@ -8,15 +8,38 @@ Este projeto implementa o algoritmo Simulated Annealing para solucionar o proble
 
 Criar uma instância com pelo menos 20 itens, com pesos entre 1 a 50 kg e valores de importância entre 1 a 100 unidades. A mochila deve ter capacidade máxima de 500 kg.
 
+## Problema Resolvido em Pesquisa Operacional
+
+**Variáveis**:
+\[
+X_i = \begin{cases} 
+1, & \text{se o item } i \text{ foi escolhido} \\ 
+0, & \text{caso contrário}
+\end{cases}
+\quad \forall i = \{1, 2, \dots, 50\}
+\]
+
+**Modelo**:
+
+\[
+\text{max} \sum_{i=1}^{50} v_i X_i
+\]
+
+Sujeito a:
+
+\[
+\sum_{i=1}^{50} p_i X_i \leq 500
+\]
+
+\[
+X_i \in \{0, 1\}
+\]
+
 ## Requisitos
 
 - Python 3.x
 - Bibliotecas necessárias 
 - [matplotlib](https://pypi.org/project/matplotlib/)
-
-## Comparação de Resultados
-
-Após a aplicação do algoritmo Simulated Annealing, compare o resultado obtido com o valor ótimo para a instância criada, executando o modelo matemático do problema da mochila.
 
 ## Pseudo Algoritmo
 
